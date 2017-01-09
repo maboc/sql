@@ -1,0 +1,6 @@
+-- Name   : dummy.sql
+-- Author : Martijn Bos
+-- Input  : -
+-- Description : Just a small dummy of which other files can be created
+-- ---------------------------------------------------------------------
+-- 2017-01-09 : MB : Initial Version
