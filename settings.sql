@@ -5,5 +5,7 @@
 -- ---------------------------------------------------------------------
 -- 2017-01-09 : MB : Initial Version
 
-set pages 100
+set pages 50
 set lines 200
+
+col name for a25
