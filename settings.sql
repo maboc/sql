@@ -11,6 +11,7 @@ set verify off
 
 col bytes_gb for 99999999
 col bytes_perc for a10
+col column_name for a25
 col index_name for a25
 col index_owner for a20
 col index_type for a20
@@ -19,3 +20,4 @@ col maxbytes_perc for a10
 col name for a25
 col owner for a20
 col table_name for a25
+col table_owner for a20

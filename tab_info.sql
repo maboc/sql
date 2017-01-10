@@ -24,20 +24,34 @@ from   dba_tables
 where  lower(owner)=lower('&&owner') 
        and lower(table_name)=lower('&&table');
 
-select owner,
-       index_name,
-       index_type,
-       uniqueness,
-       blevel,
-       leaf_blocks,
-       distinct_keys,
-       avg_leaf_blocks_per_key albpk,
-       avg_data_blocks_per_key adbpk,
-       clustering_factor cl_fac,
-       status,
-       num_rows,
-       last_analyzed
-from   dba_indexes
-where  lower(table_owner)=lower('&&owner')
-       and lower(table_name)=lower('&&table')
+select   owner,
+         index_name,
+         index_type,
+         uniqueness,
+         blevel,
+         leaf_blocks,
+         distinct_keys,
+         avg_leaf_blocks_per_key albpk,
+         avg_data_blocks_per_key adbpk,
+         clustering_factor cl_fac,
+         status,
+         num_rows,
+         last_analyzed
+from     dba_indexes
+where    lower(table_owner)=lower('&&owner')
+         and lower(table_name)=lower('&&table')
+order by owner,
+         index_name;
+
+select   index_owner,
+         index_name,
+         column_name,
+         column_position,
+         descend
+from     dba_ind_columns
+where    lower(table_owner)=lower('&&owner')
+         and lower(table_name)=lower('&&table') 
+order by index_owner,
+         index_name, 
+         column_position
 /
