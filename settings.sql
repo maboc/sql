@@ -22,3 +22,4 @@ col name for a25
 col owner for a20
 col table_name for a25
 col table_owner for a20
+col txt for a100

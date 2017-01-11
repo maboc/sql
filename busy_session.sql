@@ -25,16 +25,16 @@ order by n;
 select ash.sql_id,
        ash.sql_child_number,
        count(*) n,
-       substr(sql.sql_text,0,50) txt
+       substr(sql.sql_text,0,100) txt
 from   v$active_session_history ash,
        v$sql sql
 where  session_id=&&sidje
        and session_serial#=&&serial
        and sample_time between sysdate-(5/(24*60)) and sysdate
        and sql.sql_id=ash.sql_id
-       and sql.child_numner=ash.sql_child_number
+       and sql.child_number=ash.sql_child_number
 group by ash.sql_id,
          ash.sql_child_number,
-         substr(sql.sql_text,0,50)
+         substr(sql.sql_text,0,100)
 order by n
 /
