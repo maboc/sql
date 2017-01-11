@@ -15,6 +15,7 @@ col column_name for a25
 col index_name for a25
 col index_owner for a20
 col index_type for a20
+col machine for a35
 col maxbytes_gb for 99999999
 col maxbytes_perc for a10
 col name for a25
