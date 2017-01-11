@@ -1,0 +1,11 @@
+Name                Level  Load  What
+archs.sql           Junior Low   Displays all kind of information about the archived logs
+busy_session.sql    Medior Low   Shows What a session is wating for SQL/Events in the last 5 minutes(ASH)
+busy_sessions.sql   Medior Low   Shows which sessions are the busiest in the last 5 minutes (ASH)
+dummy.sql           Junior Low   Placeholder/base file
+help.sql            Junior Low   This file displays the help.txt
+help.txt            Junior Low   This very text
+login.sql           Junior Low   Some general settings which make my life easier
+settings.sql        Junior Low   Settings/formattig for the various sqls
+tab_info.sql        Junior Low   Information about tables and its indexes
+tbs.sql             Junior Low   How full are the different tablespaces
