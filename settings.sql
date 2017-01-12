@@ -12,6 +12,8 @@ set verify off
 col bytes_gb for 99999999
 col bytes_perc for a10
 col column_name for a25
+col database_name for a10
+col host_name for a25
 col index_name for a25
 col index_owner for a20
 col index_type for a20
