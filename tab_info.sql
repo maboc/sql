@@ -20,7 +20,7 @@ select owner,
        blocks,
        empty_blocks,
        avg_space
-from   dba_tables 
+from   all_tables 
 where  lower(owner)=lower('&&owner') 
        and lower(table_name)=lower('&&table');
 
@@ -37,7 +37,7 @@ select   owner,
          status,
          num_rows,
          last_analyzed
-from     dba_indexes
+from     all_indexes
 where    lower(table_owner)=lower('&&owner')
          and lower(table_name)=lower('&&table')
 order by owner,
@@ -48,7 +48,7 @@ select   index_owner,
          column_name,
          column_position,
          descend
-from     dba_ind_columns
+from     all_ind_columns
 where    lower(table_owner)=lower('&&owner')
          and lower(table_name)=lower('&&table') 
 order by index_owner,
