@@ -3,8 +3,9 @@
 -- Input       : -
 -- Description : Information about this database and it's instance
 -- ---------------------------------------------------------------------
--- 2 : 2017-07-20 : MB : recoverys parameters added
--- 1 : 2017-07-20 : MB : recovery area info added
+-- 3 : 2018-07-20 : MB : some slashback info added
+-- 2 : 2018-07-20 : MB : recovery parameters added
+-- 1 : 2018-07-20 : MB : recovery area info added
 -- 0 : 2017-01-12 : MB : Initial Version
 
 @settings.sql
@@ -50,5 +51,12 @@ where  name in ('db_recovery_file_dest',
                 'db_recovery_file_dest_size');
 
 select * 
-from   V$RECOVERY_AREA_USAGE
+from   V$RECOVERY_AREA_USAGE;
+
+select OLDEST_FLASHBACK_SCN,
+       OLDEST_FLASHBACK_TIME,
+       RETENTION_TARGET,
+       round(FLASHBACK_SIZE/(1024*1024*1024),2) SIZE_GB,
+       ESTIMATED_FLASHBACK_SIZE,CON_ID
+from   v$flashback_database_log
 /
