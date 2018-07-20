@@ -7,6 +7,8 @@
 -- 2017-01-12 : MB : Initial Version
 
 @settings.sql
+--lokale settings
+col name for a35
 
 select banner from v$version;
 
@@ -38,6 +40,13 @@ select instance_name,
        instance_role,
        edition
 from   v$instance;
+
+select NAME, 
+       value,
+       DESCRIPTION 
+from   v$parameter 
+where  name in ('db_recovery_file_dest',
+                'db_recovery_file_dest_size');
 
 select * 
 from   V$RECOVERY_AREA_USAGE
