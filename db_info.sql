@@ -3,6 +3,7 @@
 -- Input       : -
 -- Description : Information about this database and it's instance
 -- ---------------------------------------------------------------------
+-- 2017-07-20 : MB : recovery area info added
 -- 2017-01-12 : MB : Initial Version
 
 @settings.sql
@@ -36,5 +37,8 @@ select instance_name,
        database_status,
        instance_role,
        edition
-from   v$instance
+from   v$instance;
+
+select * 
+from   V$RECOVERY_AREA_USAGE
 /
