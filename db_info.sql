@@ -3,8 +3,9 @@
 -- Input       : -
 -- Description : Information about this database and it's instance
 -- ---------------------------------------------------------------------
--- 2017-07-20 : MB : recovery area info added
--- 2017-01-12 : MB : Initial Version
+-- 2 : 2017-07-20 : MB : recoverys parameters added
+-- 1 : 2017-07-20 : MB : recovery area info added
+-- 0 : 2017-01-12 : MB : Initial Version
 
 @settings.sql
 --lokale settings
