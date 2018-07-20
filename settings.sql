@@ -24,8 +24,10 @@ col maxbytes_perc for a10
 col name for a25
 col osuser for a15
 col owner for a20
+col restore_point_time for a35
 col table_name for a25
 col table_owner for a20
+col time for a35
 col txt for a100
 col username for a25
 col value for a50
