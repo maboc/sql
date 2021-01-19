@@ -113,8 +113,6 @@ begin
       sorting_done:=0;
       for i in total_stats_table.first .. (total_stats_table.last-1)
       loop
-        insert into log values (i);
-        commit;
         if (total_stats_table(i).delta>total_stats_table(i+1).delta)
         then
           sorting_done:=1;
