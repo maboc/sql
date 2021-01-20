@@ -92,7 +92,7 @@ begin
         -- put it al in one big table
         total_stats_table.extend;
         -- data_total:=total_stats_table(total_stats_table.last);
-        data_total:=total_stat_type();
+        -- data_total:=total_stat_type();
         data_total.sid:=data_start.sid;
         data_total.name:=data_start.name;
         data_total.class:=data_start.class;
