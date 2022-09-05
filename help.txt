@@ -7,6 +7,7 @@ dummy.sql           Junior Low   Placeholder/base file
 help.sql            Junior Low   This file displays the help.txt
 help.txt            Junior Low   This very text
 login.sql           Junior Low   Some general settings which make my life easier
+logs.sql            Junior Low   Information about the (standby) logs
 restore_points.sql  Junior Low   Which restore points are defined in the database
 settings.sql        Junior Low   Settings/formattig for the various sqls
 tab_info.sql        Junior Low   Information about tables and its indexes
