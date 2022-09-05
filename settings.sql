@@ -21,6 +21,7 @@ col index_type for a20
 col machine for a25
 col maxbytes_gb for 99999999
 col maxbytes_perc for a10
+col member for a100
 col name for a25
 col osuser for a15
 col owner for a20
