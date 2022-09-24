@@ -1,3 +1,5 @@
+set envvarsubst off
+set feedback off
 set lines 200
 
 col card for 999999999
