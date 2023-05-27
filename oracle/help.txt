@@ -4,6 +4,7 @@ busy_session.sql    Medior Low   Shows What a session is wating for SQL/Events i
 busy_sessions.sql   Medior Low   Shows which sessions are the busiest in the last 5 minutes (ASH)
 create_archs.sql    Junior Low   Creates 100 almost empty archive logs
 db_info.sql         Junior Low   Some pieces of information about the database and instance
+dict.sql            Junior Low   Which table/views have name similar to the argument
 dummy.sql           Junior Low   Placeholder/base file
 help.sql            Junior Low   This file displays the help.txt
 help.txt            Junior Low   This very text
@@ -11,5 +12,8 @@ login.sql           Junior Low   Some general settings which make my life easier
 logs.sql            Junior Low   Information about the (standby) logs
 restore_points.sql  Junior Low   Which restore points are defined in the database
 settings.sql        Junior Low   Settings/formattig for the various sqls
+sesev.sql           Medior Low   What are the different sessions waiting for
+sessions.sql        Junior Low   Which sessions are logged into the instance
+sysev.sql           Medior Low   What is the system as a whole waiting for
 tab_info.sql        Junior Low   Information about tables and its indexes
 tbs.sql             Junior Low   How full are the different tablespaces

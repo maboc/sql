@@ -9,6 +9,9 @@
 
 -- local settings
 col sz head 'Size|MB'
+col members head Members
+
+
 select group#,sequence#, bytes/(1024*1024) sz, members, archived, status from v$log;
 
 select group#, dbid, sequence#, bytes/(1024*1024) sz, used, archived, status from v$standby_log;
