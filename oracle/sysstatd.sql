@@ -1,7 +1,17 @@
 -- Name        : sysstatd.sql
 -- Author      : Martijn Bos
--- Input       : the number of seconds to wait
+-- Input       : <n>    : the number of seconds to wait
+--               <name> : name which the statistics to display should look like
 -- Description : Displays the delta for system statistics over time
+--               Only shows the statistics that changed in the interval
+--               Otherwise the list get way to long
+-- Usage       : @sysstatd <n> <name>
+--
+--               Getting the delta in statistics named %get% in a 10 second interval
+--               @sysstat 10 get
+--               
+--               Getting the delta in statistics for ALL statistics for a 60 second interval
+--               @sysstatd 60 %
 -- ---------------------------------------------------------------------
 -- 2023-05-26 : MB : Initial Version
 
