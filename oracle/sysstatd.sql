@@ -88,7 +88,8 @@ begin
 -------------------------
 --  Display results
 -------------------------
-
+  dbms_output.put_line(rpad('Class',64,' ')||rpad('Event',64,' ')||rpad('Start',20,' ')||rpad('End',20,' ')||rpad('Delta',20, ' '));
+  dbms_output.put_line(rpad('-',188,'-'));
   for s in stat_table.FIRST .. stat_table.LAST
   loop
     tmp:='';
