@@ -1,4 +1,4 @@
-set arraysize 25
+set arraysize 75
 set pagesize 0
 set linesize 200
 

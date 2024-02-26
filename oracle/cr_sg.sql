@@ -39,6 +39,42 @@ is
   blockq number; 
   gl int;  --gl: graph lines
   gr int;
+
+  function high (memory in integer_t)
+  return int
+  is
+    c int;
+    h int;
+  begin
+    h:=memory(1);
+    for c in 1..memory.count
+    loop
+      if memory(c)>h
+      then
+        h:=memory(c);
+      end if;
+    end loop;
+
+  return h;
+  end;
+  function low (memory in integer_t)
+  return int
+  is
+    c int;
+    l int;
+  begin
+    l:=memory(1);
+    for c in 1..memory.count
+    loop
+      if memory(c)<l
+      then
+        l:=memory(c);
+      end if;
+    end loop;
+
+  return l;
+  end;
+
 begin
   -- initialisation
   select name into stat1 from v$sysstat where statistic#=s1;
@@ -96,34 +132,12 @@ begin
     memoryq(memory_size):=deltaq;
 
     -- get the highest and lowest values in the arrays
-    high1:=memory1(memory_size);
-    low1:=memory1(memory_size);
-    for c in 1..memory_size
-    loop
-      if (memory1(c)>high1) 
-      then 
-        high1:=memory1(c);
-      end if;
-      if (memory1(c)<low1)
-      then
-        low1:=memory1(c);
-      end if;
-    end loop;
+    high1:=high(memory1);
+    low1:=low(memory1);
 
 
-    high2:=memory2(memory_size);
-    low2:=memory2(memory_size);
-    for c in 1..memory_size
-    loop
-      if (memory2(c)>high2)
-      then
-        high2:=memory2(c);
-      end if;
-      if (memory2(c)<low2)
-      then
-        low2:=memory2(c);
-      end if;
-    end loop;
+    high2:=high(memory2);
+    low2:=low(memory2);
 
     highq:=memoryq(memory_size);
     lowq:=memoryq(memory_size);
@@ -240,6 +254,3 @@ begin
   end loop;
 end;
 /
-
--- create or replace view sg_vw as select * from table(sg_func(int))
--- /
