@@ -4,6 +4,7 @@
 -- Description : Shows the distribution of a (numeric) data
 --               Somewhat like a histogram 
 -- ---------------------------------------------------------------------
+-- 2024-03-26  : MB : Bucket_width is now (max(column)-min(column))/number of buckets
 -- 2024-03-23  : MB : Initial Version
 
 -- Usage :
@@ -29,7 +30,7 @@ with engine as
                   count(*) freq,                                                                        -- Number of items in the bucket
                   buckets.nov nov                                                                       -- total number of values
          from     (
-                    select max(&_COLUMN)/20 bucket_width,                                               -- width of a bucket (for now we user 20 buckets)
+                    select (max(&_COLUMN)-min(&_COLUMN))/20 bucket_width,                                               -- width of a bucket (for now we user 20 buckets)
                            count(&_COLUMN) nov                                                          -- number of values
                     from   distribution
                   ) buckets,
